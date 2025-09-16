@@ -31,7 +31,7 @@ public class ControlFormularioCampos implements KeyListener{
             if (!textArea.getText().trim().isEmpty()) {
                 textArea.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
             }
-            if (e.getKeyCode() == KeyEvent.VK_ENTER || e.getKeyCode() == KeyEvent.VK_RIGHT || e.getKeyCode() == KeyEvent.VK_TAB) {
+            if (e.getKeyCode() == KeyEvent.VK_ENTER || e.getKeyCode() == KeyEvent.VK_TAB) {
                 SwingUtilities.invokeLater(() -> {
                     try {
                         KeyboardFocusManager.getCurrentKeyboardFocusManager().focusNextComponent();
@@ -43,9 +43,9 @@ public class ControlFormularioCampos implements KeyListener{
             }
         }
         //Pasa al siguiente campo al presionar la tecla asignada.
-        if (e.getKeyCode() == KeyEvent.VK_ENTER || e.getKeyCode() == KeyEvent.VK_RIGHT) {
+        if (e.getKeyCode() == KeyEvent.VK_ENTER ) {
             KeyboardFocusManager.getCurrentKeyboardFocusManager().focusNextComponent();
-        } else if (e.getKeyCode() == KeyEvent.VK_SHIFT + KeyEvent.VK_TAB || e.getKeyCode() == KeyEvent.VK_LEFT) {
+        } else if (e.getKeyCode() == KeyEvent.VK_SHIFT + KeyEvent.VK_TAB) {
             KeyboardFocusManager.getCurrentKeyboardFocusManager().focusPreviousComponent();
         }
     }
